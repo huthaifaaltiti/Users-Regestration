@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+
+    <!-- CSS Style Links -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link rel="stylesheet" href="/styles.css" />
+
+    <title>User registration center</title>
+  </head>
+
+  <body>
+    <div class="main-container">
+      <div class="container container-fluid pt-4 main-content">
+        <div class="row mb-3">
+          <!-- top controlling buttons container -->
+          <div class="col col-12 d-flex">
+            <button
+              type="button"
+              class="btn btn-dark me-auto add-account-btn text-uppercase"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-plus-circle-fill"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"
+                />
+              </svg>
+
+              Add Account
+            </button>
+
+            <button type="button" class="btn btn-warning ms-2 text-uppercase">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-archive"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M0 2a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1v7.5a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 1 12.5V5a1 1 0 0 1-1-1V2zm2 3v7.5A1.5 1.5 0 0 0 3.5 14h9a1.5 1.5 0 0 0 1.5-1.5V5H2zm13-3H1v2h14V2zM5 7.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z"
+                />
+              </svg>
+
+              Archives
+            </button>
+
+            <button type="button" class="btn btn-danger ms-3 text-uppercase">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-trash"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"
+                />
+                <path
+                  fill-rule="evenodd"
+                  d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"
+                />
+              </svg>
+              Trash
+            </button>
+          </div>
+        </div>
+
+        <!-- filter buttons container -->
+        <div class="row mb-5">
+          <div class="col col-12">
+            <button
+              type="button"
+              class="btn btn-secondary filter-btn text-uppercase"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-filter-square-fill"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm.5 5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1 0-1zM4 8.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm2 3a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5z"
+                ></path>
+              </svg>
+              Customize
+            </button>
+          </div>
+
+          <div
+            class="col col-12 d-flex justify-content-between mt-3 gap-4 btn-group btn-group-justified filtered-row"
+          >
+            <button
+              type="button"
+              class="btn btn-secondary rounded text-uppercase"
+            >
+              Account Type
+            </button>
+
+            <button
+              type="button"
+              class="btn btn-secondary rounded text-uppercase"
+            >
+              Date Created
+            </button>
+
+            <button
+              type="button"
+              class="btn btn-secondary rounded text-uppercase"
+            >
+              Name
+            </button>
+
+            <button
+              type="button"
+              class="btn btn-secondary rounded text-uppercase"
+            >
+              Price
+            </button>
+          </div>
+        </div>
+
+        <!-- cards container -->
+        <div class="row d-flex flex-row gap-0 gy-4 cards-container-de">
+          <!-- column 1, card 1 -->
+          <!-- <div class="col col-12 col-lg-3 w-25">
+            <div class="card">
+              <div class="card-header row p-2 m-0 card-top-de">
+                <div class="col-sm-3 card-image-container">
+                  <img
+                    src="/assets/images/IMG-20191023-WA0002.jpg"
+                    alt=""
+                    class="card-img card-img-de"
+                  />
+                </div>
+
+                <div class="col d-flex flex-column justify-content-center">
+                  <h5 class="card-title card-title-de">
+                    <span class="first-name">Huthaifa</span>
+                    <span class="last-name">Altiti</span>
+                  </h5>
+
+                  <h6 class="card-subtitle mb-2 text-muted">
+                    Membership
+
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-patch-check"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M10.354 6.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708 0z"
+                      />
+                      <path
+                        d="m10.273 2.513-.921-.944.715-.698.622.637.89-.011a2.89 2.89 0 0 1 2.924 2.924l-.01.89.636.622a2.89 2.89 0 0 1 0 4.134l-.637.622.011.89a2.89 2.89 0 0 1-2.924 2.924l-.89-.01-.622.636a2.89 2.89 0 0 1-4.134 0l-.622-.637-.89.011a2.89 2.89 0 0 1-2.924-2.924l.01-.89-.636-.622a2.89 2.89 0 0 1 0-4.134l.637-.622-.011-.89a2.89 2.89 0 0 1 2.924-2.924l.89.01.622-.636a2.89 2.89 0 0 1 4.134 0l-.715.698a1.89 1.89 0 0 0-2.704 0l-.92.944-1.32-.016a1.89 1.89 0 0 0-1.911 1.912l.016 1.318-.944.921a1.89 1.89 0 0 0 0 2.704l.944.92-.016 1.32a1.89 1.89 0 0 0 1.912 1.911l1.318-.016.921.944a1.89 1.89 0 0 0 2.704 0l.92-.944 1.32.016a1.89 1.89 0 0 0 1.911-1.912l-.016-1.318.944-.921a1.89 1.89 0 0 0 0-2.704l-.944-.92.016-1.32a1.89 1.89 0 0 0-1.912-1.911l-1.318.016z"
+                      />
+                    </svg>
+                  </h6>
+                </div>
+              </div>
+
+              <div class="card-body card-body-de d-flex flex-column">
+                <h5 class="card-title">Product Title</h5>
+                <p class="card-text card-text-de">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus obcaecati odio officiis natus iusto laboriosam qui ducimus dicta, distinctio, doloremque velit dignissimos porro earum dolores. Illo minima sit ad laudantium!
+                </p>
+
+                <div class="row text-uppercase mt-auto">
+                  <div
+                    class="col col-12 d-flex gap-2 btn-group btn-group-justified"
+                  >
+                    <a href="#" class="btn btn-warning rounded">Archive</a>
+                    <a href="#" class="btn btn-danger rounded">Delete</a>
+                  </div>
+
+                  <div class="col col-12 btn-group btn-group-justified mt-2 kj">
+                    <a href="#" class="btn btn-secondary">Edit</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> -->
+        </div>
+      </div>
+
+      <!-- add new user form container -->
+      <div class="add-user-form-container container">
+        <div class="row">
+          <div class="col m-5">
+            <form class="user-form p-3 pb-1 rounded" action="#">
+              <!-- close form button -->
+              <button
+                type="button"
+                class="btn btn-secondary close-form-btn text-uppercase"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-x-square-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.354 4.646L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 1 1 .708-.708z"
+                  />
+                </svg>
+
+                close
+              </button>
+
+              <!-- input first name -->
+              <div class="input-group mb-3 mt-5">
+                <span class="input-group-text" id="basic-addon1"
+                  >First name:</span
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="First name"
+                  aria-label="Username"
+                  aria-describedby="basic-addon1"
+                />
+              </div>
+
+              <!-- input last name -->
+              <div class="input-group mb-5">
+                <span class="input-group-text" id="basic-addon1"
+                  >Last name:</span
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Last name"
+                  aria-label="Username"
+                  aria-describedby="basic-addon1"
+                />
+              </div>
+
+              <!-- input image file -->
+              <div class="input-group mb-3 w-25 input-image">
+                <input type="file" accept="image/*" class="form-control" />
+              </div>
+
+              <!-- write a description -->
+              <div class="input-group mb-5">
+                <span class="input-group-text" id="basic-addon1"
+                  >Description</span
+                >
+                <textarea
+                  placeholder="Write your description..."
+                  class="form-control"
+                  aria-label="With textarea"
+                ></textarea>
+              </div>
+
+              <!-- submit form data -->
+              <div class="input-group mb-5 d-flex justify-content-center">
+                <button
+                  type="submit"
+                  class="btn btn-secondary text-center py-3 w-25 text-uppercase submit-user-form"
+                >
+                  Create your card
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Main .js file -->
+    <script src="/js/app.js"></script>
+  </body>
+</html>
