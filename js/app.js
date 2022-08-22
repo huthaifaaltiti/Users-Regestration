@@ -21,12 +21,13 @@ closeFormBtn.addEventListener("click", function () {
   userFormContainer.classList.toggle("close");
 });
 
+// store uploaded image from input in session storage
 userInpPic.addEventListener("change", function () {
   console.log(this.files);
   let reader = new FileReader();
 
   reader.addEventListener("load", () => {
-    localStorage.setItem("recentImage", reader.result);
+    sessionStorage.setItem("recentImage", reader.result);
   });
   reader.readAsDataURL(this.files[0]);
 });
@@ -35,7 +36,8 @@ submitUserForm.addEventListener("click", function () {
   const newDiv = document.createElement("div");
   newDiv.classList.add("col", "col-12", "col-lg-12", "w-25");
 
-  let recentImageURL = localStorage.getItem("recentImage");
+  // get stored uploaded image from session storage
+  let recentImageURL = sessionStorage.getItem("recentImage");
 
   newDiv.innerHTML = `
   <div class="card">
@@ -101,4 +103,4 @@ submitUserForm.addEventListener("click", function () {
   userCardsContainer.appendChild(newDiv);
 });
 
-
+// hi
